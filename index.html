@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ventanita Marissa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>VENTANITA MARISSA</h1>
+  <button class="admin-btn" onclick="mostrarSeccion('admin')">Admin</button>
+</header>
+
+<div class="subtitulo">
+  <p>🔥 Comida rápida • Pedidos en línea</p>
+</div>
+
+<nav>
+  <button onclick="mostrarSeccion('menu')">Menú</button>
+  <button onclick="mostrarSeccion('pedido')">Pedido</button>
+  <button onclick="mostrarSeccion('estado')">Estado</button>
+</nav>
+
+<section id="menu">
+  <h2>Menú</h2>
+
+  <div class="categoria">
+    <h3>🍔 Hamburguesas</h3>
+    <div id="hamburguesas"></div>
+  </div>
+
+  <div class="categoria">
+    <h3>🌭 Perros</h3>
+    <div id="perros"></div>
+  </div>
+
+  <div class="categoria">
+    <h3>🍟 Papas</h3>
+    <div id="papas"></div>
+  </div>
+
+  <div class="categoria">
+    <h3>🌮 Otros</h3>
+    <div id="otros"></div>
+  </div>
+</section>
+
+<section id="pedido" class="hidden">
+  <div class="pedido-container">
+    <h2>Tu Pedido</h2>
+
+    <ul id="carrito"></ul>
+    <p class="total">Total: ₡<span id="total">0</span></p>
+
+    <input type="text" id="nombre" placeholder="Nombre">
+    <input type="text" id="telefono" placeholder="Teléfono">
+
+    <button onclick="enviarPedido()">Enviar Pedido</button>
+  </div>
+</section>
+
+<section id="estado" class="hidden">
+  <div class="estado-container">
+    <h2>Estado del Pedido</h2>
+
+    <input type="text" id="buscarNombre" placeholder="Nombre">
+    <input type="text" id="buscarTelefono" placeholder="Teléfono">
+
+    <button onclick="verEstado()">Ver estado</button>
+    <p id="resultadoEstado"></p>
+  </div>
+</section>
+
+<section id="admin" class="hidden">
+  <div class="estado-container">
+    <h2>Administrar Pedidos</h2>
+    <ul id="listaPedidos"></ul>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ventanita Marissa</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

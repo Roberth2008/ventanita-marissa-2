@@ -1,0 +1,132 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  text-align: center;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.admin-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #00bcd4;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #555;
+  margin: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: orange;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+section {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* GRID */
+.categoria div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  animation: fadeUp 0.4s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 30px;
+}
+
+.desc {
+  font-size: 13px;
+  color: gray;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.precio {
+  font-weight: bold;
+  color: #ff5722;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* PEDIDO */
+.pedido-container {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.total {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+/* ADMIN */
+#listaPedidos li {
+  background: white;
+  padding: 10px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
